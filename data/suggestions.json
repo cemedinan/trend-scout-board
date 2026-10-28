@@ -1,9 +1,96 @@
 {
  "meta": {
-  "generated_at": "2026-10-28T05:24:45Z",
-  "note": "Borradores en inglés. Cifras de los resúmenes de noticias de X enlazados (generados por IA): verifica cada número antes de publicar. Gráficos 'search-low' y 'galaxy-bear' usan datos reales (Google Trends vía pytrends, Kraken XBT/USD)."
+  "generated_at": "2026-10-28T11:16:18Z",
+  "note": "Borradores en inglés. Cifras de las fuentes enlazadas (resúmenes de X generados por IA, Farside, 8-K, prensa): verifica cada número antes de publicar. Gráficos con datos reales: 'search-low' y 'galaxy-bear' (Google Trends, Kraken), 'etf-176m' (Farside) y 'october-red' (Binance BTCUSDT mensual)."
  },
  "entries": [
+  {
+   "id": "etf-176m-2026-10-28",
+   "detected_at": "2026-10-28T11:20:00Z",
+   "topic": "ETFs spot de BTC: +$176.0M netos el 27/10 (IBIT +$151.5M, FBTC +$24.5M; los otros 10 en cero), segundo día de entradas antes de la Fed",
+   "why": "Dato fresco y verificable (Farside) justo antes del FOMC. El gráfico de flujos diarios muestra el contexto: un día no es tendencia. Alto potencial de bookmarks para quien sigue flujos.",
+   "post": "$176M went into US spot Bitcoin ETFs on Tuesday. Two funds took all of it.\n\nIBIT: +$151.5M\nFBTC: +$24.5M\nThe other 10 funds: zero.\n\nSecond inflow day in a row, right before the Fed. But since Oct 9, daily flows have swung from -$635.6M to +$526.7M.\n\nOne day of $BTC ETF flows tells you shares were created. Not who bought or why.\n\nDo you track flows daily or weekly?",
+   "cta": [
+    "Bookmark this and compare it with next week's flows."
+   ],
+   "image": "assets/img/etf-176m-2026-10-28.jpg",
+   "image_note": "Gráfico con datos reales: flujos netos diarios de ETFs spot BTC, 9–27 oct 2026 (tabla de Farside Investors, descargada 2026-10-28).",
+   "visual": "Gráfico de barras en azul marino #0B0B2B: flujo neto diario (US$M) del 9 al 27 de octubre, barras positivas en lima #C5E523 y negativas en gris; valor sobre cada barra. Título blanco: '+$176M on Oct 27. Only IBIT and FBTC got it.' Fuente Farside abajo, logo @ForecastQuant como marca de agua.",
+   "format": "gráfico",
+   "priority": "Alta",
+   "window": "Hoy mié 28/10, 9:00-11:00 Chile (antes de la Fed, si no usas el post de FOMC) o jue 29/10, 9:00-11:00",
+   "source": "https://farside.co.uk/btc/"
+  },
+  {
+   "id": "october-red-2026-10-28",
+   "detected_at": "2026-10-28T11:20:00Z",
+   "topic": "'Uptober' falla otra vez: $BTC va camino a su segundo octubre negativo seguido",
+   "why": "Tema estacional que todos comentan a fin de mes. Ángulo quant propio: tabla de retornos de octubre con datos reales; invita a debatir si la estacionalidad sirve.",
+   "post": "Uptober didn't show up. Again.\n\n$BTC October returns (monthly open to close):\n2019: +10.3%\n2020: +28.0%\n2021: +39.9%\n2022: +5.5%\n2023: +28.5%\n2024: +11.0%\n2025: -3.9%\n2026 so far: -2.7%\n\nSix green Octobers, then two red ones.\n\nSeasonality is a tendency, not a promise. And one weak month doesn't tell you much about the next twelve.\n\nDo you still look at monthly seasonality?",
+   "cta": [
+    "Bookmark this and check it again on November 1.",
+    "If it was useful, a repost helps more people see it."
+   ],
+   "image": "assets/img/october-red-2026-10-28.jpg",
+   "image_note": "Gráfico con datos reales: velas mensuales BTCUSDT de Binance (apertura a cierre de octubre, 2017–2026). 2026 = 1 al 28 oct, mes sin cerrar: actualizar la cifra el día que publiques.",
+   "visual": "Barras en azul marino: retorno de octubre por año 2017–2026, verdes lima los positivos y grises los negativos, etiqueta % sobre cada barra; 2026 marcado con asterisco 'mes sin cerrar'. Título blanco: 'Uptober? Two red Octobers in a row.' Logo marca de agua.",
+   "format": "gráfico",
+   "priority": "Alta",
+   "window": "Jue 29/10 o vie 30/10, 9:00-11:00 Chile (antes del cierre de mes; revisa el % de 2026 ese día)",
+   "source": "https://x.com/i/trending/2115361233100554740"
+  },
+  {
+   "id": "trustwallet-fake-card-2026-10-28",
+   "detected_at": "2026-10-28T11:20:00Z",
+   "topic": "Falsa 'Trust Wallet Card' ($1, 8% cashback, límite $100.000, sin KYC) vacía wallets vía aprobaciones de tokens",
+   "why": "Seguridad práctica y accionable; encaja con la línea de custodia de la cuenta. Checklist corto = bookmarks y reposts.",
+   "post": "A $1 crypto card with 8% cashback, a $100,000 limit and no KYC.\n\nIt's a fake site using Trust Wallet's brand. Trust Wallet's security team confirmed it's not theirs.\n\nThe trap isn't the $1. It's the step where you connect your wallet and sign an approval. That can let a contract move your tokens. No seed phrase needed.\n\n3 habits:\n• Only use the official app and site\n• Use a separate wallet for connecting to sites\n• Review and revoke old token approvals\n\nWhich one do you actually do?",
+   "cta": [
+    "A repost might keep someone from signing the wrong thing.",
+    "Bookmark this checklist for later."
+   ],
+   "image": "assets/img/trustwallet-fake-card-2026-10-28.jpg",
+   "image_note": "Tarjeta numérica con cifras citadas en la fuente (crypto.news, 28 oct 2026: $1, 8%, $100,000, sin KYC).",
+   "visual": "Tarjeta azul marino: arriba en lima 'SECURITY · FAKE \"TRUST WALLET CARD\"', grande en blanco '$1 card / 8% cashback', debajo '$100,000 limit · no KYC' y remate lima 'The trap is the approval you sign.' Bitcoin blanco a la derecha, logo marca de agua.",
+   "format": "post corto",
+   "priority": "Alta",
+   "window": "Jue 29/10, 9:00-11:00 Chile",
+   "source": "https://crypto.news/trust-wallet-warns-of-fake-crypto-card-website-targeting-users/"
+  },
+  {
+   "id": "strategy-pause-2026-10-28",
+   "detected_at": "2026-10-28T11:20:00Z",
+   "topic": "Strategy no compró BTC (19-25 oct): usó $204.9M en recomprar su preferente STRC; mantiene 848.517 BTC",
+   "why": "Cambio de comportamiento del mayor tenedor corporativo, con cifras del 8-K (verificables). Genera debate sin necesidad de exagerar.",
+   "post": "Strategy had cash last week. It didn't buy Bitcoin.\n\nOct 19-25, per its 8-K:\n• $204.9M spent buying back its own STRC preferred stock\n• 0 BTC bought or sold\n• Holdings: 848,517 BTC, avg cost ~$75,446\n• USD Cash left: $242.4M\n\nWhen the largest corporate $BTC holder spends on its own capital structure, that's worth reading carefully. It's not a sale. It's also not a bid.\n\nPause or pattern? The next 8-K will say more.",
+   "cta": [
+    "Bookmark this and let's compare it with next week's 8-K."
+   ],
+   "image": "assets/img/strategy-pause-2026-10-28.jpg",
+   "image_note": "Tarjeta numérica con cifras del Form 8-K de Strategy del 26 oct 2026.",
+   "visual": "Tarjeta azul marino: kicker lima 'STRATEGY · 8-K · OCT 19–25', grande en blanco '$204.9M / 0 BTC bought', líneas 'spent buying back its own STRC preferred' y 'Holdings: 848,517 BTC · USD Cash $242.4M', remate lima 'Pause or pattern? Watch the next 8-K.' Bitcoin blanco, logo marca de agua.",
+   "format": "post corto",
+   "priority": "Media",
+   "window": "Jue 29/10, 9:00-11:00 Chile (antes del próximo 8-K del lunes)",
+   "source": "https://www.strategy.com/press/strategy-repurchases-205-million-of-strc_10-26-2026"
+  },
+  {
+   "id": "itau-custody-2026-10-28",
+   "detected_at": "2026-10-28T11:20:00Z",
+   "topic": "Itaú, primer banco de Brasil en formalizar ante el Banco Central su intermediación y custodia cripto (Resolución 520, plazo 30/10)",
+   "why": "Adopción en LatAm, cercana a la audiencia hispana. Ángulo propio: custodia bancaria vs. tener tus llaves.",
+   "post": "Brazil's largest private bank just put its Bitcoin custody on the record.\n\nItaú Unibanco notified the central bank of its crypto trading and custody services under the new rules (Resolution 520). It's the first bank to do it. The deadline is Oct 30.\n\nIt offers 15 assets, including $BTC, and has since Dec 2023. It doesn't disclose users or volumes.\n\nBank custody makes access easier. It's still someone else holding the keys.\n\nWould you hold $BTC at your bank?",
+   "cta": [
+    "Bookmark this if you're comparing custody options."
+   ],
+   "image": "assets/img/itau-custody-2026-10-28.jpg",
+   "image_note": "Tarjeta numérica con datos citados por CoinDesk y Valor Econômico (15 activos, desde dic 2023, plazo 30 oct).",
+   "visual": "Tarjeta azul marino: kicker lima 'BRAZIL · RESOLUTION 520', grande en blanco 'Itaú: first bank to formalize', líneas sobre trading + custodia y '15 assets incl. $BTC · offered since Dec 2023', remate lima 'Bank custody is still someone else's keys.' Bitcoin blanco, logo marca de agua.",
+   "format": "post corto",
+   "priority": "Media",
+   "window": "Vie 30/10, 9:00-11:00 Chile (día del plazo)",
+   "source": "https://www.coindesk.com/policy/2026/10/28/brazil-s-largest-lender-becomes-first-bank-to-formalize-crypto-brokerage-under-new-rules"
+  },
   {
    "id": "fomc-2026-10-28",
    "detected_at": "2026-10-28T05:20:00Z",
