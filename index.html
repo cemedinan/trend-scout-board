@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0B0B2B">
+<title>TrendScout · @ForecastQuant</title><link rel="icon" type="image/png" href="./assets/logo-watermark.png">
+<style>
+:root{--bg:#0B0B2B;--fg:#F2F2F5;--fg2:#9C9CC0;--acc:#C5E523;--line:#25255A}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg)}
+body{font:15px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0;background:url(./assets/logo-watermark.png) center 60%/min(70vw,420px) no-repeat;opacity:.06;pointer-events:none;z-index:0}
+a{color:var(--acc);text-decoration:none}button{font:inherit;background:none;border:0;padding:0;cursor:pointer;color:var(--acc)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:14px 18px}
+.title{font-size:20px}.tag{color:var(--acc)}main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:14px 18px 60px}
+.sys{color:var(--fg2);margin:6px 0}.nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:14px 0 8px}.nav button.on{color:var(--fg);text-decoration:underline;text-underline-offset:4px}
+.post{border-top:1px solid var(--line);padding:14px 0}.meta{color:var(--fg2);font-size:13px}.topic{font-size:16px;margin:6px 0;color:var(--fg)}
+.pA{color:var(--bg);background:var(--acc);padding:0 6px}.pM{color:var(--acc);border:1px solid var(--acc);padding:0 5px}.pB{color:var(--fg2);border:1px solid var(--fg2);padding:0 5px}
+.blk{margin:8px 0;padding-left:12px;border-left:2px solid var(--fg2)}.blk.d{border-color:var(--acc)}.lbl{color:var(--acc);font-size:13px}
+.blk pre{margin:4px 0;white-space:pre-wrap;word-wrap:break-word;font:inherit}.acts{display:flex;gap:18px;font-size:13px;flex-wrap:wrap}
+@media(max-width:560px){body{font-size:14px}.title{font-size:17px}.bar{padding:12px}main{padding:10px 12px 48px}}
+</style></head><body>
+<header class="bar"><div class="title">trend-scout/@ForecastQuant</div><span class="tag">#tendencias</span></header>
+<main>
+<p class="sys">* TrendScout · tendencias de Bitcoin, macro y quant convertidas en borradores para revisar *</p>
+<p class="sys">* mejor ventana: 9:00–11:00 hora Chile, días hábiles *</p>
+<p class="sys" id="meta">* cargando… *</p>
+<nav class="nav"><button data-f="all" class="on">#todas</button><button data-f="Alta">#alta</button><button data-f="Media">#media</button><button data-f="Baja">#baja</button></nav>
+<section id="list"></section>
+<p class="sys" style="margin-top:24px">* solo lectura: nada se publica en X · verifica cifras en la fuente antes de publicar · se ocultan sugerencias de más de 72 h *</p>
+</main>
+<script>
+const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const tz={timeZone:'America/Santiago',dateStyle:'medium',timeStyle:'short'};let D=[],F='all';
+async function cp(b,t){try{await navigator.clipboard.writeText(t)}catch(x){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}const p=b.textContent;b.textContent='[copiado]';setTimeout(()=>b.textContent=p,1400)}
+const pc={Alta:'pA',Media:'pM',Baja:'pB'};
+function card(p){return`<article class="post"><div class="meta"><span class="${pc[p.priority]||'pB'}">${e(p.priority)}</span> · ${e(p.format)} · detectado ${e(new Date(p.detected_at).toLocaleString('es-CL',tz))}</div>
+<div class="topic">${e(p.topic)}</div><div class="meta">por qué: ${e(p.why)}</div>
+<div class="blk d"><div class="lbl">borrador/es</div><pre id="t-${e(p.id)}">${e(p.post)}</pre></div>
+<div class="blk"><div class="lbl">visual (para Venn/Spielberg)</div><pre id="v-${e(p.id)}">${e(p.visual)}</pre></div>
+${p.window?`<div class="meta">ventana: ${e(p.window)}</div>`:''}
+<div class="acts"><button data-c="t-${e(p.id)}">[COPIAR POST]</button><button data-c="v-${e(p.id)}">[COPIAR VISUAL]</button><a href="${e(p.source)}" target="_blank" rel="noopener">[fuente ↗]</a></div></article>`}
+function render(){const L=D.filter(p=>F==='all'||p.priority===F);document.getElementById('list').innerHTML=L.map(card).join('')||'<p class="sys">* sin sugerencias vigentes *</p>';
+document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>cp(b,document.getElementById(b.dataset.c).textContent));document.querySelectorAll('[data-f]').forEach(b=>b.classList.toggle('on',b.dataset.f===F))}
+(async()=>{const j=await (await fetch('./data/suggestions.json?ts='+Date.now())).json();const cut=Date.now()-72*3600e3,o={Alta:0,Media:1,Baja:2};
+D=j.entries.filter(p=>new Date(p.detected_at)>=cut).sort((a,b)=>(o[a.priority]-o[b.priority])||(new Date(b.detected_at)-new Date(a.detected_at)));
+document.getElementById('meta').textContent=`* última actualización: ${new Date(j.meta.generated_at).toLocaleString('es-CL',tz)} (Chile) · ${D.length} sugerencias vigentes *`;
+document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{F=b.dataset.f;render()});render()})();
+</script></body></html>
