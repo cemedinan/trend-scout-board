@@ -1,7 +1,7 @@
 {
  "meta": {
-  "generated_at": "2026-10-28T05:20:00Z",
-  "note": "Cifras tomadas de los resúmenes de noticias de X enlazados; verifica cada número antes de publicar."
+  "generated_at": "2026-10-28T05:24:45Z",
+  "note": "Borradores en inglés. Cifras de los resúmenes de noticias de X enlazados (generados por IA): verifica cada número antes de publicar. Gráficos 'search-low' y 'galaxy-bear' usan datos reales (Google Trends vía pytrends, Kraken XBT/USD)."
  },
  "entries": [
   {
@@ -9,91 +9,138 @@
    "detected_at": "2026-10-28T05:20:00Z",
    "topic": "FOMC hoy: el mercado da 90-94% de probabilidad a que la Fed mantenga tasas (3,75-4,00%)",
    "why": "Evento macro del día. Todo el mundo hablará de Warsh a las 14:30 ET; publicar antes con un marco claro captura bookmarks y replies.",
-   "post": "Hoy la Fed casi seguro no mueve tasas.\n\nEl mercado le da 90-94% a mantener 3,75-4,00%. Lo que importa es el tono de Warsh.\n\nPara $BTC eso es lo que mueve: no la decisión, el mensaje.\n\nYo no apalanco antes de un FOMC. Spot y paciencia.",
+   "post": "The Fed decision today is almost a non-event. The tone isn't.\n\nMarkets price 90-94% odds of a hold at 3.75-4.00%. What moves $BTC is the message from Warsh at the press conference.\n\nI don't add leverage before an FOMC. Spot, and patience.",
    "visual": "Gráfico limpio en fondo azul marino #0B0B2B: barra horizontal con '90-94% mantener' en lima #C5E523 y el resto en gris. Arriba en blanco: 'FOMC · 28 oct'. Logo de Bitcoin blanco pequeño abajo a la derecha, logo @ForecastQuant como marca de agua.",
    "format": "gráfico",
    "priority": "Alta",
    "window": "Hoy mié 28/10, 9:00-11:00 Chile (antes de la decisión 15:00 Chile)",
    "source": "https://x.com/i/trending/2115127977906192860",
    "cta": [
-    "Guarda esto para revisarlo después del anuncio de la Fed."
-   ]
+    "Bookmark this and check it again after the Fed speaks."
+   ],
+   "image": "assets/img/fomc-2026-10-28.jpg",
+   "image_note": "Número/tarjeta con la cifra citada en la fuente (90–94% de probabilidad de mantener)."
   },
   {
    "id": "search-low-2026-10-28",
    "detected_at": "2026-10-28T05:20:00Z",
    "topic": "Búsquedas de 'bitcoin' en Google en mínimos de ~5 años con el precio cerca de $81k",
    "why": "Contraste fuerte (precio alto vs. interés bajo) que genera debate. Ángulo diferenciado: la demanda migró a ETFs y apps, la métrica vieja puede engañar.",
-   "post": "Nadie busca Bitcoin en Google. Y el precio sigue cerca de $81k.\n\nLas búsquedas están en niveles de 2021-2024. Pero hoy mucha gente compra $BTC vía ETF o la app de su broker, sin buscar nada.\n\nQuizá el dato no mide lo mismo que antes.",
+   "post": "Almost nobody is Googling Bitcoin. $BTC is still near $81k.\n\nWorldwide search interest just hit 19 out of 100, the lowest reading in five years of weekly data.\n\nBut a lot of people now buy through an ETF or a broker app. They don't search anything first.\n\nMaybe the old metric just measures less than it used to.",
    "visual": "Fondo azul marino. Dos líneas: interés de búsqueda (gris, cayendo) y precio BTC (blanco), con la brecha resaltada en lima. Título blanco: '¿Retail se fue o cambió de puerta?'. Usar datos reales de Google Trends y precio al generar.",
    "format": "gráfico",
    "priority": "Alta",
    "window": "Jue 29/10, 9:00-11:00 Chile",
    "source": "https://x.com/i/trending/2115259919402234342",
    "cta": [
-    "Si te hizo pensar, un repost ayuda a que más gente lo vea."
-   ]
+    "If this made you think, a repost helps more people see it."
+   ],
+   "image": "assets/img/search-low-2026-10-28.jpg",
+   "image_note": "Gráfico con datos reales: Google Trends 'bitcoin' 5 años (pytrends) vs cierre semanal $BTC (Kraken)."
   },
   {
    "id": "liq-200m-2026-10-28",
    "detected_at": "2026-10-28T05:20:00Z",
    "topic": "Caída bajo $80k liquidó más de $200M en apuestas apalancadas en una hora",
    "why": "Encaja con la postura de la cuenta (spot, sin apalancamiento). Contenido educativo con alto potencial de bookmarks.",
-   "post": "Más de $200 millones liquidados en una hora cuando $BTC perdió los $80k.\n\nEl precio solo se movió unos pocos por ciento. A quien tenía spot no le pasó nada.\n\nEl apalancamiento no te cambia la tesis. Te cambia cuánto tiempo puedes sostenerla.",
+   "post": "$200M+ got liquidated in one hour when $BTC lost $80k.\n\nThe price moved a few percent. Spot holders didn't lose a single coin.\n\nLeverage doesn't change your thesis. It changes how long you get to hold it.",
    "visual": "Fondo azul marino. Dos columnas: 'Spot' (moneda Bitcoin blanca intacta, check lima) vs 'Apalancado 20x' (moneda rota, texto 'liquidado'). Abajo en lima: '$200M+ en 1 hora'.",
    "format": "post corto",
    "priority": "Alta",
    "window": "Vie 30/10, 9:00-11:00 Chile",
    "source": "https://x.com/i/trending/2114040161508159895",
    "cta": [
-    "Guárdalo para la próxima vez que tientes el apalancamiento.",
-    "Si te fue útil, un repost ayuda a que más gente lo vea."
-   ]
+    "Bookmark this for the next time leverage looks tempting.",
+    "If it helped, a repost helps more people see it."
+   ],
+   "image": "assets/img/liq-200m-2026-10-28.jpg",
+   "image_note": "Tarjeta numérica con la cifra citada en la fuente ($200M+ en 1 hora)."
   },
   {
    "id": "franklin-etf-2026-10-28",
    "detected_at": "2026-10-28T05:20:00Z",
    "topic": "Franklin Templeton presenta ETFs que reinvierten dividendos de acciones en Bitcoin (FBEQ, FIBT)",
    "why": "Noticia de adopción con mecánica concreta y explicable. Buen hilo corto educativo.",
-   "post": "Tus dividendos podrían comprar Bitcoin solos.\n\nFranklin Templeton presentó a la SEC dos ETFs (FBEQ y FIBT): 95% acciones, 5% $BTC, y los dividendos se reinvierten en Bitcoin. Tope de rebalanceo en 5%, límite duro 20%.\n\nEs exposición pasiva sin tocar una exchange. Ojo: tampoco es custodia propia.",
+   "post": "What if your dividends bought Bitcoin on their own?\n\nFranklin Templeton filed two ETFs with the SEC (FBEQ and FIBT): 95% stocks, 5% $BTC, with dividends reinvested into Bitcoin. Rebalance target 5%, hard cap 20%.\n\nIt's passive exposure without touching an exchange. Just remember: exposure isn't custody.",
    "visual": "Diagrama de flujo en azul marino: 'Acciones' → 'Dividendos' → flecha lima → moneda Bitcoin blanca. Recuadro: '95% / 5% · tope 20%'.",
    "format": "hilo",
    "priority": "Media",
    "window": "Lun 2/11, 9:00-11:00 Chile",
    "source": "https://x.com/i/trending/2114591661300834357",
    "cta": [
-    "Guarda este hilo por si lo necesitas más adelante."
-   ]
+    "Bookmark this thread in case you need it later."
+   ],
+   "image": "assets/img/franklin-etf-2026-10-28.jpg",
+   "image_note": "Tarjeta tipo diagrama con las cifras citadas en la fuente (95/5, tope 20%)."
   },
   {
    "id": "galaxy-bear-2026-10-28",
    "detected_at": "2026-10-28T05:20:00Z",
    "topic": "Galaxy Research dice que el bear market terminó en junio; nivel a vigilar: media de 50 semanas ~$76.5k",
    "why": "Debate fuerte (Calacanis vs Saylor/Galaxy). Ángulo quant: un nivel concreto que invalida la tesis, en vez de opinión.",
-   "post": "Galaxy dice que el bear market de Bitcoin terminó en junio.\n\nLo útil no es la frase, es el nivel que ellos mismos dan para invalidarla: la media de 50 semanas, cerca de $76.5k.\n\nSobre ese nivel, la tesis se sostiene. Bajo él, $BTC tiene que demostrar otra cosa.",
+   "post": "Galaxy says the Bitcoin bear market ended in June.\n\nThe useful part isn't the claim. It's the line that tests it: the 50-week moving average, now about $76k on weekly closes.\n\nAbove it, the thesis holds. Below it, $BTC has something to prove.",
    "visual": "Gráfico semanal de BTC en azul marino, velas blancas, media de 50 semanas en lima con etiqueta '~$76.5k · invalidación'. Marca el mínimo de junio. Usar datos reales de precio.",
    "format": "gráfico",
    "priority": "Media",
    "window": "Mar 3/11, 9:00-11:00 Chile",
    "source": "https://x.com/i/trending/2114764602634551420",
    "cta": [
-    "Guárdalo y revisamos el nivel en unas semanas."
-   ]
+    "Bookmark this and let's check the level in a few weeks."
+   ],
+   "image": "assets/img/galaxy-bear-2026-10-28.jpg",
+   "image_note": "Gráfico con datos reales: cierres semanales $BTC (Kraken) + media de 50 semanas calculada (~$76.2k; la fuente cita ~$76.5k)."
   },
   {
    "id": "polymarket-5m-2026-10-28",
    "detected_at": "2026-10-28T05:20:00Z",
    "topic": "Polymarket lanza mercados de 5 minutos sobre BTC/ETH/SOL/XRP en EE.UU.",
    "why": "Novedad llamativa; ángulo de contraste con horizonte largo y postura anti-apuesta de corto plazo.",
-   "post": "Ahora puedes apostar si $BTC sube o baja en los próximos 5 minutos.\n\nPolymarket lo lanzó en su plataforma regulada en EE.UU.\n\nEn 5 minutos Bitcoin es ruido. La tesis se juega en años.",
+   "post": "You can now bet on whether $BTC goes up or down in the next 5 minutes.\n\nPolymarket launched it on its regulated US platform.\n\nOver 5 minutes, Bitcoin is noise. The thesis plays out over years.",
    "visual": "Meme minimalista azul marino: reloj de 5 min en gris vs calendario de 10 años en lima, moneda Bitcoin blanca al centro. Texto: 'ruido' vs 'tesis'.",
    "format": "meme",
    "priority": "Baja",
    "window": "Cualquier día hábil 9:00-11:00 Chile",
    "source": "https://x.com/i/trending/2115171955313688638",
    "cta": [
-    "Si piensas en años y no en minutos, sígueme para más datos así."
-   ]
+    "If you think in years, not minutes, follow for more data like this."
+   ],
+   "image": "assets/img/polymarket-5m-2026-10-28.jpg",
+   "image_note": "Tarjeta tipo meme, sin cifras nuevas."
+  },
+  {
+   "id": "datavault-custody-2026-10-28",
+   "detected_at": "2026-10-28T05:25:00Z",
+   "topic": "Datavault AI: 817.6 BTC atrapados en un exchange 4 meses; acciones −49.6% y reexpresión de estados financieros",
+   "why": "Caso real y verificable (SEC filing) que encaja perfecto con la postura de custodia de la cuenta. Alto potencial de bookmarks y reposts; ángulo educativo, no burla.",
+   "post": "A public company thought it owned 817.6 BTC. It couldn't withdraw a single one.\n\nDatavault AI says the coins have been stuck in an exchange wallet since June, despite repeated withdrawal requests. It's now restating four quarters of financials. Shares fell 49.6% in a day.\n\nOwning $BTC and controlling $BTC are not the same thing. Learn how custody works before you size up.",
+   "cta": [
+    "Bookmark this before you leave coins on an exchange.",
+    "A repost might save someone a hard lesson."
+   ],
+   "visual": "Tarjeta azul marino: '817.6 BTC stuck' en blanco grande, 'Shares −49.6% in one day', remate lima 'Not your keys, not your coins.' Bitcoin blanco a la derecha, logo marca de agua.",
+   "format": "post corto",
+   "priority": "Alta",
+   "window": "Mié 28/10 o jue 29/10, 9:00-11:00 Chile",
+   "source": "https://x.com/i/trending/2115246075414184139",
+   "image": "assets/img/datavault-custody-2026-10-28.jpg",
+   "image_note": "Tarjeta numérica con cifras citadas en la fuente (resumen de X sobre el filing ante la SEC)."
+  },
+  {
+   "id": "ibit-inflow-2026-10-28",
+   "detected_at": "2026-10-28T05:25:00Z",
+   "topic": "ETFs spot de BTC: +$110.3M netos el 26/10, 100% de IBIT (BlackRock); el resto en cero",
+   "why": "Dato concreto de flujos con contraste (un solo fondo explica todo). Encaja con la serie de 'quién compra mientras el retail no busca'.",
+   "post": "One fund did all the buying.\n\nOn October 26, US spot Bitcoin ETFs took in $110.3M net. Every dollar went to BlackRock's IBIT, roughly 1,380 BTC. The other Bitcoin ETFs had zero net flow.\n\nRetail searches are at lows, but institutional demand for $BTC hasn't gone quiet. Concentration in one fund is worth watching too.",
+   "cta": [
+    "Bookmark this if you track ETF flows."
+   ],
+   "visual": "Tarjeta azul marino: '+$110.3M' grande en blanco, 'net inflow — 100% from IBIT', '≈1,380 BTC', remate lima. Bitcoin blanco a la derecha.",
+   "format": "post corto",
+   "priority": "Media",
+   "window": "Jue 29/10, 9:00-11:00 Chile",
+   "source": "https://x.com/i/trending/2114954704258314514",
+   "image": "assets/img/ibit-inflow-2026-10-28.jpg",
+   "image_note": "Tarjeta numérica con cifras citadas en la fuente."
   }
  ]
 }
