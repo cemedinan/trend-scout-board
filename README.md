@@ -16,6 +16,7 @@ Live: https://cemedinan.github.io/trend-scout-board/
     "topic": "tendencia o tema detectado",
     "why": "por qué tiene potencial",
     "post": "borrador del post o hilo (español; \n para saltos)",
+    "cta": ["1 o 2 opciones de CTA suave, máx. 1 línea c/u: guardar, repostear o seguir"],
     "visual": "descripción precisa del visual (azul marino #0B0B2B, Bitcoin blanco, lima #C5E523)",
     "format": "post corto | hilo | gráfico | video | meme",
     "priority": "Alta | Media | Baja",
@@ -24,4 +25,4 @@ Live: https://cemedinan.github.io/trend-scout-board/
   } ] }
 ```
 `data/archive.json`: `{ "entries": [ ...mismo esquema... ] }`.
-Reglas: no inventar datos, citar siempre la fuente, no copiar posts textualmente, $BTC en posts de noticias.
+Cada borrador termina con un CTA suave (campo `cta`, natural, no vendedor). Reglas: no inventar datos, citar siempre la fuente, no copiar posts textualmente, $BTC en posts de noticias.

@@ -1,9 +1,99 @@
-{"meta":{"generated_at":"2026-10-28T05:20:00Z","note":"Cifras tomadas de los resúmenes de noticias de X enlazados; verifica cada número antes de publicar."},
-"entries":[
-{"id":"fomc-2026-10-28","detected_at":"2026-10-28T05:20:00Z","topic":"FOMC hoy: el mercado da 90-94% de probabilidad a que la Fed mantenga tasas (3,75-4,00%)","why":"Evento macro del día. Todo el mundo hablará de Warsh a las 14:30 ET; publicar antes con un marco claro captura bookmarks y replies.","post":"Hoy la Fed casi seguro no mueve tasas.\n\nEl mercado le da 90-94% a mantener 3,75-4,00%. Lo que importa es el tono de Warsh.\n\nPara $BTC eso es lo que mueve: no la decisión, el mensaje.\n\nYo no apalanco antes de un FOMC. Spot y paciencia.","visual":"Gráfico limpio en fondo azul marino #0B0B2B: barra horizontal con '90-94% mantener' en lima #C5E523 y el resto en gris. Arriba en blanco: 'FOMC · 28 oct'. Logo de Bitcoin blanco pequeño abajo a la derecha, logo @ForecastQuant como marca de agua.","format":"gráfico","priority":"Alta","window":"Hoy mié 28/10, 9:00-11:00 Chile (antes de la decisión 15:00 Chile)","source":"https://x.com/i/trending/2115127977906192860"},
-{"id":"search-low-2026-10-28","detected_at":"2026-10-28T05:20:00Z","topic":"Búsquedas de 'bitcoin' en Google en mínimos de ~5 años con el precio cerca de $81k","why":"Contraste fuerte (precio alto vs. interés bajo) que genera debate. Ángulo diferenciado: la demanda migró a ETFs y apps, la métrica vieja puede engañar.","post":"Nadie busca Bitcoin en Google. Y el precio sigue cerca de $81k.\n\nLas búsquedas están en niveles de 2021-2024. Pero hoy mucha gente compra $BTC vía ETF o la app de su broker, sin buscar nada.\n\nQuizá el dato no mide lo mismo que antes.","visual":"Fondo azul marino. Dos líneas: interés de búsqueda (gris, cayendo) y precio BTC (blanco), con la brecha resaltada en lima. Título blanco: '¿Retail se fue o cambió de puerta?'. Usar datos reales de Google Trends y precio al generar.","format":"gráfico","priority":"Alta","window":"Jue 29/10, 9:00-11:00 Chile","source":"https://x.com/i/trending/2115259919402234342"},
-{"id":"liq-200m-2026-10-28","detected_at":"2026-10-28T05:20:00Z","topic":"Caída bajo $80k liquidó más de $200M en apuestas apalancadas en una hora","why":"Encaja con la postura de la cuenta (spot, sin apalancamiento). Contenido educativo con alto potencial de bookmarks.","post":"Más de $200 millones liquidados en una hora cuando $BTC perdió los $80k.\n\nEl precio solo se movió unos pocos por ciento. A quien tenía spot no le pasó nada.\n\nEl apalancamiento no te cambia la tesis. Te cambia cuánto tiempo puedes sostenerla.","visual":"Fondo azul marino. Dos columnas: 'Spot' (moneda Bitcoin blanca intacta, check lima) vs 'Apalancado 20x' (moneda rota, texto 'liquidado'). Abajo en lima: '$200M+ en 1 hora'.","format":"post corto","priority":"Alta","window":"Vie 30/10, 9:00-11:00 Chile","source":"https://x.com/i/trending/2114040161508159895"},
-{"id":"franklin-etf-2026-10-28","detected_at":"2026-10-28T05:20:00Z","topic":"Franklin Templeton presenta ETFs que reinvierten dividendos de acciones en Bitcoin (FBEQ, FIBT)","why":"Noticia de adopción con mecánica concreta y explicable. Buen hilo corto educativo.","post":"Tus dividendos podrían comprar Bitcoin solos.\n\nFranklin Templeton presentó a la SEC dos ETFs (FBEQ y FIBT): 95% acciones, 5% $BTC, y los dividendos se reinvierten en Bitcoin. Tope de rebalanceo en 5%, límite duro 20%.\n\nEs exposición pasiva sin tocar una exchange. Ojo: tampoco es custodia propia.","visual":"Diagrama de flujo en azul marino: 'Acciones' → 'Dividendos' → flecha lima → moneda Bitcoin blanca. Recuadro: '95% / 5% · tope 20%'.","format":"hilo","priority":"Media","window":"Lun 2/11, 9:00-11:00 Chile","source":"https://x.com/i/trending/2114591661300834357"},
-{"id":"galaxy-bear-2026-10-28","detected_at":"2026-10-28T05:20:00Z","topic":"Galaxy Research dice que el bear market terminó en junio; nivel a vigilar: media de 50 semanas ~$76.5k","why":"Debate fuerte (Calacanis vs Saylor/Galaxy). Ángulo quant: un nivel concreto que invalida la tesis, en vez de opinión.","post":"Galaxy dice que el bear market de Bitcoin terminó en junio.\n\nLo útil no es la frase, es el nivel que ellos mismos dan para invalidarla: la media de 50 semanas, cerca de $76.5k.\n\nSobre ese nivel, la tesis se sostiene. Bajo él, $BTC tiene que demostrar otra cosa.","visual":"Gráfico semanal de BTC en azul marino, velas blancas, media de 50 semanas en lima con etiqueta '~$76.5k · invalidación'. Marca el mínimo de junio. Usar datos reales de precio.","format":"gráfico","priority":"Media","window":"Mar 3/11, 9:00-11:00 Chile","source":"https://x.com/i/trending/2114764602634551420"},
-{"id":"polymarket-5m-2026-10-28","detected_at":"2026-10-28T05:20:00Z","topic":"Polymarket lanza mercados de 5 minutos sobre BTC/ETH/SOL/XRP en EE.UU.","why":"Novedad llamativa; ángulo de contraste con horizonte largo y postura anti-apuesta de corto plazo.","post":"Ahora puedes apostar si $BTC sube o baja en los próximos 5 minutos.\n\nPolymarket lo lanzó en su plataforma regulada en EE.UU.\n\nEn 5 minutos Bitcoin es ruido. La tesis se juega en años.","visual":"Meme minimalista azul marino: reloj de 5 min en gris vs calendario de 10 años en lima, moneda Bitcoin blanca al centro. Texto: 'ruido' vs 'tesis'.","format":"meme","priority":"Baja","window":"Cualquier día hábil 9:00-11:00 Chile","source":"https://x.com/i/trending/2115171955313688638"}
-]}
+{
+ "meta": {
+  "generated_at": "2026-10-28T05:20:00Z",
+  "note": "Cifras tomadas de los resúmenes de noticias de X enlazados; verifica cada número antes de publicar."
+ },
+ "entries": [
+  {
+   "id": "fomc-2026-10-28",
+   "detected_at": "2026-10-28T05:20:00Z",
+   "topic": "FOMC hoy: el mercado da 90-94% de probabilidad a que la Fed mantenga tasas (3,75-4,00%)",
+   "why": "Evento macro del día. Todo el mundo hablará de Warsh a las 14:30 ET; publicar antes con un marco claro captura bookmarks y replies.",
+   "post": "Hoy la Fed casi seguro no mueve tasas.\n\nEl mercado le da 90-94% a mantener 3,75-4,00%. Lo que importa es el tono de Warsh.\n\nPara $BTC eso es lo que mueve: no la decisión, el mensaje.\n\nYo no apalanco antes de un FOMC. Spot y paciencia.",
+   "visual": "Gráfico limpio en fondo azul marino #0B0B2B: barra horizontal con '90-94% mantener' en lima #C5E523 y el resto en gris. Arriba en blanco: 'FOMC · 28 oct'. Logo de Bitcoin blanco pequeño abajo a la derecha, logo @ForecastQuant como marca de agua.",
+   "format": "gráfico",
+   "priority": "Alta",
+   "window": "Hoy mié 28/10, 9:00-11:00 Chile (antes de la decisión 15:00 Chile)",
+   "source": "https://x.com/i/trending/2115127977906192860",
+   "cta": [
+    "Guarda esto para revisarlo después del anuncio de la Fed."
+   ]
+  },
+  {
+   "id": "search-low-2026-10-28",
+   "detected_at": "2026-10-28T05:20:00Z",
+   "topic": "Búsquedas de 'bitcoin' en Google en mínimos de ~5 años con el precio cerca de $81k",
+   "why": "Contraste fuerte (precio alto vs. interés bajo) que genera debate. Ángulo diferenciado: la demanda migró a ETFs y apps, la métrica vieja puede engañar.",
+   "post": "Nadie busca Bitcoin en Google. Y el precio sigue cerca de $81k.\n\nLas búsquedas están en niveles de 2021-2024. Pero hoy mucha gente compra $BTC vía ETF o la app de su broker, sin buscar nada.\n\nQuizá el dato no mide lo mismo que antes.",
+   "visual": "Fondo azul marino. Dos líneas: interés de búsqueda (gris, cayendo) y precio BTC (blanco), con la brecha resaltada en lima. Título blanco: '¿Retail se fue o cambió de puerta?'. Usar datos reales de Google Trends y precio al generar.",
+   "format": "gráfico",
+   "priority": "Alta",
+   "window": "Jue 29/10, 9:00-11:00 Chile",
+   "source": "https://x.com/i/trending/2115259919402234342",
+   "cta": [
+    "Si te hizo pensar, un repost ayuda a que más gente lo vea."
+   ]
+  },
+  {
+   "id": "liq-200m-2026-10-28",
+   "detected_at": "2026-10-28T05:20:00Z",
+   "topic": "Caída bajo $80k liquidó más de $200M en apuestas apalancadas en una hora",
+   "why": "Encaja con la postura de la cuenta (spot, sin apalancamiento). Contenido educativo con alto potencial de bookmarks.",
+   "post": "Más de $200 millones liquidados en una hora cuando $BTC perdió los $80k.\n\nEl precio solo se movió unos pocos por ciento. A quien tenía spot no le pasó nada.\n\nEl apalancamiento no te cambia la tesis. Te cambia cuánto tiempo puedes sostenerla.",
+   "visual": "Fondo azul marino. Dos columnas: 'Spot' (moneda Bitcoin blanca intacta, check lima) vs 'Apalancado 20x' (moneda rota, texto 'liquidado'). Abajo en lima: '$200M+ en 1 hora'.",
+   "format": "post corto",
+   "priority": "Alta",
+   "window": "Vie 30/10, 9:00-11:00 Chile",
+   "source": "https://x.com/i/trending/2114040161508159895",
+   "cta": [
+    "Guárdalo para la próxima vez que tientes el apalancamiento.",
+    "Si te fue útil, un repost ayuda a que más gente lo vea."
+   ]
+  },
+  {
+   "id": "franklin-etf-2026-10-28",
+   "detected_at": "2026-10-28T05:20:00Z",
+   "topic": "Franklin Templeton presenta ETFs que reinvierten dividendos de acciones en Bitcoin (FBEQ, FIBT)",
+   "why": "Noticia de adopción con mecánica concreta y explicable. Buen hilo corto educativo.",
+   "post": "Tus dividendos podrían comprar Bitcoin solos.\n\nFranklin Templeton presentó a la SEC dos ETFs (FBEQ y FIBT): 95% acciones, 5% $BTC, y los dividendos se reinvierten en Bitcoin. Tope de rebalanceo en 5%, límite duro 20%.\n\nEs exposición pasiva sin tocar una exchange. Ojo: tampoco es custodia propia.",
+   "visual": "Diagrama de flujo en azul marino: 'Acciones' → 'Dividendos' → flecha lima → moneda Bitcoin blanca. Recuadro: '95% / 5% · tope 20%'.",
+   "format": "hilo",
+   "priority": "Media",
+   "window": "Lun 2/11, 9:00-11:00 Chile",
+   "source": "https://x.com/i/trending/2114591661300834357",
+   "cta": [
+    "Guarda este hilo por si lo necesitas más adelante."
+   ]
+  },
+  {
+   "id": "galaxy-bear-2026-10-28",
+   "detected_at": "2026-10-28T05:20:00Z",
+   "topic": "Galaxy Research dice que el bear market terminó en junio; nivel a vigilar: media de 50 semanas ~$76.5k",
+   "why": "Debate fuerte (Calacanis vs Saylor/Galaxy). Ángulo quant: un nivel concreto que invalida la tesis, en vez de opinión.",
+   "post": "Galaxy dice que el bear market de Bitcoin terminó en junio.\n\nLo útil no es la frase, es el nivel que ellos mismos dan para invalidarla: la media de 50 semanas, cerca de $76.5k.\n\nSobre ese nivel, la tesis se sostiene. Bajo él, $BTC tiene que demostrar otra cosa.",
+   "visual": "Gráfico semanal de BTC en azul marino, velas blancas, media de 50 semanas en lima con etiqueta '~$76.5k · invalidación'. Marca el mínimo de junio. Usar datos reales de precio.",
+   "format": "gráfico",
+   "priority": "Media",
+   "window": "Mar 3/11, 9:00-11:00 Chile",
+   "source": "https://x.com/i/trending/2114764602634551420",
+   "cta": [
+    "Guárdalo y revisamos el nivel en unas semanas."
+   ]
+  },
+  {
+   "id": "polymarket-5m-2026-10-28",
+   "detected_at": "2026-10-28T05:20:00Z",
+   "topic": "Polymarket lanza mercados de 5 minutos sobre BTC/ETH/SOL/XRP en EE.UU.",
+   "why": "Novedad llamativa; ángulo de contraste con horizonte largo y postura anti-apuesta de corto plazo.",
+   "post": "Ahora puedes apostar si $BTC sube o baja en los próximos 5 minutos.\n\nPolymarket lo lanzó en su plataforma regulada en EE.UU.\n\nEn 5 minutos Bitcoin es ruido. La tesis se juega en años.",
+   "visual": "Meme minimalista azul marino: reloj de 5 min en gris vs calendario de 10 años en lima, moneda Bitcoin blanca al centro. Texto: 'ruido' vs 'tesis'.",
+   "format": "meme",
+   "priority": "Baja",
+   "window": "Cualquier día hábil 9:00-11:00 Chile",
+   "source": "https://x.com/i/trending/2115171955313688638",
+   "cta": [
+    "Si piensas en años y no en minutos, sígueme para más datos así."
+   ]
+  }
+ ]
+}

@@ -33,9 +33,10 @@ const pc={Alta:'pA',Media:'pM',Baja:'pB'};
 function card(p){return`<article class="post"><div class="meta"><span class="${pc[p.priority]||'pB'}">${e(p.priority)}</span> · ${e(p.format)} · detectado ${e(new Date(p.detected_at).toLocaleString('es-CL',tz))}</div>
 <div class="topic">${e(p.topic)}</div><div class="meta">por qué: ${e(p.why)}</div>
 <div class="blk d"><div class="lbl">borrador/es</div><pre id="t-${e(p.id)}">${e(p.post)}</pre></div>
+${(p.cta||[]).length?`<div class="blk d"><div class="lbl">cta sugerido</div><pre id="c-${e(p.id)}">${p.cta.map(e).join('\n')}</pre></div>`:''}
 <div class="blk"><div class="lbl">visual (para Venn/Spielberg)</div><pre id="v-${e(p.id)}">${e(p.visual)}</pre></div>
 ${p.window?`<div class="meta">ventana: ${e(p.window)}</div>`:''}
-<div class="acts"><button data-c="t-${e(p.id)}">[COPIAR POST]</button><button data-c="v-${e(p.id)}">[COPIAR VISUAL]</button><a href="${e(p.source)}" target="_blank" rel="noopener">[fuente ↗]</a></div></article>`}
+<div class="acts"><button data-c="t-${e(p.id)}">[COPIAR POST]</button>${(p.cta||[]).length?`<button data-c="c-${e(p.id)}">[COPIAR CTA]</button>`:''}<button data-c="v-${e(p.id)}">[COPIAR VISUAL]</button><a href="${e(p.source)}" target="_blank" rel="noopener">[fuente ↗]</a></div></article>`}
 function render(){const L=D.filter(p=>F==='all'||p.priority===F);document.getElementById('list').innerHTML=L.map(card).join('')||'<p class="sys">* sin sugerencias vigentes *</p>';
 document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>cp(b,document.getElementById(b.dataset.c).textContent));document.querySelectorAll('[data-f]').forEach(b=>b.classList.toggle('on',b.dataset.f===F))}
 (async()=>{const j=await (await fetch('./data/suggestions.json?ts='+Date.now())).json();const cut=Date.now()-72*3600e3,o={Alta:0,Media:1,Baja:2};
