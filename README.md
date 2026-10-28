@@ -35,3 +35,6 @@ Estilo: azul marino #0B0B2B, Bitcoin blanco, acentos lima #C5E523, logo de `asse
 Gráficos solo con datos reales (Google Trends vía pytrends, precios Kraken). Si no hay datos, tarjeta numérica con cifras ya citadas en la fuente. Nunca inventar cifras.
 `update.py` mueve las imágenes de sugerencias archivadas (>72 h) a `assets/img/archive/` y actualiza su ruta en `data/archive.json`.
 Idioma: posts y CTA en inglés; la interfaz y las explicaciones quedan en español.
+
+## Copiar post + CTA
+Cada tarjeta tiene un botón destacado **"📋 Copiar post + CTA"** que copia en un solo clic el borrador del post, una línea en blanco y el CTA (si hay dos opciones, usa la primera). Funciona en celular (Clipboard API con respaldo `execCommand`) y muestra "¡Copiado!" en lima por 1,5 s. Los botones individuales (post, CTA, visual) siguen disponibles.
