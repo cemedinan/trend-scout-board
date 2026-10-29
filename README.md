@@ -2,10 +2,11 @@
 Tendencias de Bitcoin/macro/quant convertidas en borradores de posts para revisión humana. Nada se publica en X.
 Live: https://cemedinan.github.io/trend-scout-board/
 
-## Actualización diaria
-1. Detectar tendencias (X news/search + web) y escribir entradas nuevas en un archivo `nuevas.json` (lista).
-2. `python3 update.py nuevas.json` → agrega las nuevas, conserva las del día anterior, BORRA las de >48 h (2 días) y sus imágenes, actualiza la fecha.
-3. `git commit -am "update" && git push`. La página además oculta en el navegador todo lo que tenga >48 h.
+## Actualización diaria (22:00 hora Chile) — REEMPLAZA TODO
+1. Detectar tendencias actuales (X news/search + web). No repetir temas ya sugeridos salvo que haya un desarrollo materialmente nuevo.
+2. Generar las imágenes del set nuevo en `assets/img/` y escribir las entradas (5–8) en `nuevas.json` (lista).
+3. `python3 update.py nuevas.json` → BORRA todas las sugerencias anteriores de `data/suggestions.json` y todas sus imágenes en `assets/img/`, y deja solo el set nuevo.
+4. `git add -A && git commit -m "update" && git push`. La página muestra todo lo que hay en el JSON (sin filtro por antigüedad).
 
 ## Esquema `data/suggestions.json`
 ```
@@ -26,14 +27,14 @@ Live: https://cemedinan.github.io/trend-scout-board/
     "source": "URL de la fuente (obligatoria)"
   } ] }
 ```
-`data/archive.json`: histórico antiguo (ya no se usa; las sugerencias de >48 h se borran).
+No hay archivo histórico: cada corrida reemplaza el set completo.
 Cada borrador termina con un CTA suave (campo `cta`, natural, no vendedor). Reglas: no inventar datos, citar siempre la fuente, no copiar posts textualmente, $BTC en posts de noticias.
 
 ## Imágenes (`image`)
 Cada sugerencia lleva una imagen real en `assets/img/<id>.jpg` (1200x675, JPG optimizado <100 KB), referenciada en el campo `image`. La tarjeta la muestra arriba del borrador, con el brief del visual debajo y un enlace de descarga.
 Estilo: azul marino #0B0B2B, Bitcoin blanco, acentos lima #C5E523, logo de `assets/logo-watermark.png` como marca de agua.
 Gráficos solo con datos reales (Google Trends vía pytrends, precios Kraken). Si no hay datos, tarjeta numérica con cifras ya citadas en la fuente. Nunca inventar cifras.
-`update.py` borra las sugerencias de más de 48 h (2 días) y sus imágenes en `assets/img/`.
+`update.py` borra en cada corrida todas las imágenes de `assets/img/` que no pertenecen al set nuevo.
 Idioma: posts y CTA en inglés; la interfaz y las explicaciones quedan en español.
 
 ## Copiar post + CTA
