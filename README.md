@@ -37,5 +37,9 @@ Gráficos solo con datos reales (Google Trends vía pytrends, precios Kraken). S
 `update.py` borra en cada corrida todas las imágenes de `assets/img/` que no pertenecen al set nuevo.
 Idioma: posts y CTA en inglés; la interfaz y las explicaciones quedan en español.
 
-## Copiar post + CTA
-Cada tarjeta tiene un botón destacado **"📋 Copiar post + CTA"** que copia en un solo clic el borrador del post, una línea en blanco y el CTA (si hay dos opciones, usa la primera). Funciona en celular (Clipboard API con respaldo `execCommand`) y muestra "¡Copiado!" en lima por 1,5 s. Los botones individuales (post, CTA, visual) siguen disponibles.
+## Botón POST ON X (mantener en todas las corridas)
+Cada tarjeta tiene un botón grande lima **POST ON X**: un `<a target="_blank">` a `https://x.com/intent/post?text=<encodeURIComponent(texto)>` que abre el editor de X prellenado. **Nada se publica automáticamente**: tú revisas y presionas Post.
+- Texto = post + línea en blanco + primer CTA si cabe en 280 caracteres (URLs cuentan 23). Si no cabe: solo el post y la nota "CTA not added (over 280 chars); add it as a reply".
+- Si el post solo ya pasa 280: botón "POST ON X (thread: edit)" y nota para dividirlo en hilo en X.
+- El intent de X no puede adjuntar imágenes: al lado está "[image ↓]" con la indicación "download the image, then attach it in X before sending".
+- Se mantienen botones chicos: [copiar post], [COPIAR CTA], [COPIAR VISUAL]. Lógica en `xi()`/`withCta()` de `index.html` (fuente de verdad junto a `update.py`); las corridas solo cambian `data/` y `assets/img/`, no tocar este botón.

@@ -15,6 +15,8 @@ a{color:var(--acc);text-decoration:none}button{font:inherit;background:none;bord
 .blk{margin:8px 0;padding-left:12px;border-left:2px solid var(--fg2)}.blk.d{border-color:var(--acc)}.lbl{color:var(--acc);font-size:13px}
 .blk pre{margin:4px 0;white-space:pre-wrap;word-wrap:break-word;font:inherit}.acts{display:flex;gap:18px;font-size:13px;flex-wrap:wrap}
 .both{display:block;width:100%;margin:10px 0 12px;padding:12px;border:1px solid var(--acc);color:var(--bg);background:var(--acc);font-weight:700;font-size:15px;text-align:center}.both.ok{background:var(--bg);color:var(--acc)}
+.xb{display:flex;justify-content:center;align-items:center;width:100%;min-height:52px;margin:10px 0 6px;padding:12px;border:1px solid var(--acc);background:var(--acc);color:var(--bg)!important;font-weight:700;font-size:16px;letter-spacing:.04em;text-align:center}.xb:active{background:var(--bg);color:var(--acc)!important}
+.xrow{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:13px;margin:0 0 10px}.hint{color:var(--fg2)}.note{color:var(--acc)}
 .img{margin:10px 0}.img img{display:block;width:100%;height:auto;border:1px solid var(--line)}
 @media(max-width:560px){body{font-size:14px}.title{font-size:17px}.bar{padding:12px}main{padding:10px 12px 48px}}
 </style></head><body>
@@ -25,13 +27,16 @@ a{color:var(--acc);text-decoration:none}button{font:inherit;background:none;bord
 <p class="sys" id="meta">* cargando… *</p>
 <nav class="nav"><button data-f="all" class="on">#todas</button><button data-f="Alta">#alta</button><button data-f="Media">#media</button><button data-f="Baja">#baja</button></nav>
 <section id="list"></section>
-<p class="sys" style="margin-top:24px">* solo lectura: nada se publica en X · verifica cifras en la fuente antes de publicar · cada actualización (22:00 Chile) borra todo y crea un set nuevo *</p>
+<p class="sys" style="margin-top:24px">* POST ON X solo abre el editor de X con el texto; tú presionas Post y adjuntas la imagen · verifica cifras en la fuente antes de publicar · cada actualización (22:00 Chile) borra todo y crea un set nuevo *</p>
 </main>
 <script>
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const tz={timeZone:'America/Santiago',dateStyle:'medium',timeStyle:'short'};let D=[],F='all';
 function fb(t){const a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(a);a.focus();a.select();a.setSelectionRange(0,t.length);try{document.execCommand('copy')}finally{a.remove()}}
 async function cp(b,t,m){try{if(!navigator.clipboard||!window.isSecureContext)throw 0;await navigator.clipboard.writeText(t)}catch(x){fb(t)}if(b._t)return;const p=b.textContent;b.textContent=m||'[copiado]';b.classList.add('ok');b._t=setTimeout(()=>{b.textContent=p;b.classList.remove('ok');b._t=0},1500)}
+function xi(t){return'https://x.com/intent/post?text='+encodeURIComponent(t)}
+function xlen(t){return[...t.replace(/https?:\/\/\S+/g,'x'.repeat(23))].length}
+function withCta(p){const t=String(p.post||'').trim(),c=(p.cta||[])[0];if(xlen(t)>280)return{t,thread:1};if(!c)return{t};const f=t+'\n\n'+String(c).trim();return xlen(f)<=280?{t:f}:{t,note:1}}
 const pc={Alta:'pA',Media:'pM',Baja:'pB'};
 function card(p){return`<article class="post"><div class="meta"><span class="${pc[p.priority]||'pB'}">${e(p.priority)}</span> · ${e(p.format)} · detectado ${e(new Date(p.detected_at).toLocaleString('es-CL',tz))}</div>
 <div class="topic">${e(p.topic)}</div><div class="meta">por qué: ${e(p.why)}</div>
@@ -39,11 +44,11 @@ ${p.image?`<figure class="img"><a href="${e(p.image)}" target="_blank"><img src=
 <div class="blk d"><div class="lbl">borrador/en</div><pre id="t-${e(p.id)}">${e(p.post)}</pre></div>
 ${(p.cta||[]).length?`<div class="blk d"><div class="lbl">cta sugerido</div><pre id="c-${e(p.id)}">${p.cta.map(e).join('\n')}</pre></div>`:''}
 <div class="blk"><div class="lbl">brief del visual (para Venn/Spielberg)</div><pre id="v-${e(p.id)}">${e(p.visual)}</pre></div>
-${(p.cta||[]).length?`<button class="both" data-b="${e(p.id)}">📋 Copiar post + CTA</button>`:''}
+${(()=>{const w=withCta(p);return`<a class="xb" href="${e(xi(w.t))}" target="_blank" rel="noopener">${w.thread?'POST ON X (thread: edit)':'POST ON X'}</a><div class="xrow">${p.image?`<a href="${e(p.image)}" download>[image ↓]</a><span class="hint">↳ download the image, then attach it in X before sending</span>`:''}${w.thread?`<span class="note">post over 280 chars: split it into a thread in X</span>`:w.note?`<span class="note">CTA not added (over 280 chars); add it as a reply</span>`:''}</div>`})()}
 ${p.window?`<div class="meta">ventana: ${e(p.window)}</div>`:''}
-<div class="acts"><button data-c="t-${e(p.id)}">[COPIAR POST]</button>${(p.cta||[]).length?`<button data-c="c-${e(p.id)}">[COPIAR CTA]</button>`:''}<button data-c="v-${e(p.id)}">[COPIAR VISUAL]</button>${p.image?`<a href="${e(p.image)}" download>[DESCARGAR IMAGEN]</a>`:''}<a href="${e(p.source)}" target="_blank" rel="noopener">[fuente ↗]</a></div></article>`}
+<div class="acts"><button data-c="t-${e(p.id)}">[copiar post]</button>${(p.cta||[]).length?`<button data-c="c-${e(p.id)}">[COPIAR CTA]</button>`:''}<button data-c="v-${e(p.id)}">[COPIAR VISUAL]</button><a href="${e(p.source)}" target="_blank" rel="noopener">[fuente ↗]</a></div></article>`}
 function render(){const L=D.filter(p=>F==='all'||p.priority===F);document.getElementById('list').innerHTML=L.map(card).join('')||'<p class="sys">* sin sugerencias vigentes *</p>';
-document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>cp(b,document.getElementById(b.dataset.c).textContent));document.querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{const p=D.find(x=>x.id===b.dataset.b);cp(b,p.post.trim()+'\n\n'+String(p.cta[0]).trim(),'¡Copiado!')});document.querySelectorAll('[data-f]').forEach(b=>b.classList.toggle('on',b.dataset.f===F))}
+document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>cp(b,document.getElementById(b.dataset.c).textContent));document.querySelectorAll('[data-f]').forEach(b=>b.classList.toggle('on',b.dataset.f===F))}
 (async()=>{const j=await (await fetch('./data/suggestions.json?ts='+Date.now())).json();const o={Alta:0,Media:1,Baja:2};
 D=j.entries.slice().sort((a,b)=>(o[a.priority]-o[b.priority])||(new Date(b.detected_at)-new Date(a.detected_at)));
 document.getElementById('meta').textContent=`* última actualización: ${new Date(j.meta.generated_at).toLocaleString('es-CL',tz)} (Chile) · ${D.length} sugerencias nuevas (set completo de esta actualización) *`;
