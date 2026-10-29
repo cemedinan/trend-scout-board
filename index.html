@@ -35,9 +35,7 @@ const tz={timeZone:'America/Santiago',dateStyle:'medium',timeStyle:'short'};let 
 function fb(t){const a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(a);a.focus();a.select();a.setSelectionRange(0,t.length);try{document.execCommand('copy')}finally{a.remove()}}
 async function cp(b,t,m){try{if(!navigator.clipboard||!window.isSecureContext)throw 0;await navigator.clipboard.writeText(t)}catch(x){fb(t)}if(b._t)return;const p=b.textContent;b.textContent=m||'[copiado]';b.classList.add('ok');b._t=setTimeout(()=>{b.textContent=p;b.classList.remove('ok');b._t=0},1500)}
 function xi(t){return'https://x.com/intent/post?text='+encodeURIComponent(t)}
-function withCta(p){const t=String(p.post||'').trim(),c=(p.cta||[])[0];return{t:c?t+'
-
-'+String(c).trim():t}}
+function withCta(p){const t=String(p.post||'').trim(),c=(p.cta||[])[0];return{t:c?t+'\n\n'+String(c).trim():t}}
 function xdeep(h){var u=new URL(h);var t=u.searchParams.get("text")||"";return "twitter://post?message="+encodeURIComponent(t)}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a.xb");if(!a)return;var ios=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform=="MacIntel"&&navigator.maxTouchPoints>1);if(!ios)return;e.preventDefault();var w=a.href,tm;function cl(){if(document.hidden){clearTimeout(tm);document.removeEventListener("visibilitychange",cl)}}document.addEventListener("visibilitychange",cl);tm=setTimeout(function(){document.removeEventListener("visibilitychange",cl);if(!document.hidden)location.href=w},1500);location.href=xdeep(w)});
 const pc={Alta:'pA',Media:'pM',Baja:'pB'};
