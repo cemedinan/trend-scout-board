@@ -39,10 +39,8 @@ Idioma: posts y CTA en inglés; la interfaz y las explicaciones quedan en españ
 
 ## Botón POST ON X (mantener en todas las corridas)
 Cada tarjeta tiene un botón grande lima **POST ON X**: un `<a target="_blank">` a `https://x.com/intent/post?text=<encodeURIComponent(texto)>` que abre el editor de X prellenado. **Nada se publica automáticamente**: tú revisas y presionas Post.
-- Texto = post + línea en blanco + primer CTA si cabe en 280 caracteres (URLs cuentan 23). Si no cabe: solo el post y la nota "CTA not added (over 280 chars); add it as a reply".
-- Si el post solo ya pasa 280: botón "POST ON X (thread: edit)" y nota para dividirlo en hilo en X.
+- Texto = siempre post + línea en blanco + primer CTA, completo. No se considera el largo (sin límite de 280, sin notas ni recortes).
 - El intent de X no puede adjuntar imágenes: al lado está "[image ↓]" con la indicación "download the image, then attach it in X before sending".
 - Se mantienen botones chicos: [copiar post], [COPIAR CTA], [COPIAR VISUAL]. Lógica en `xi()`/`withCta()` de `index.html` (fuente de verdad junto a `update.py`); las corridas solo cambian `data/` y `assets/img/`, no tocar este botón.
-- Si el texto pasa 280 se muestra "más de 280 caracteres (N)" (el intent no recorta).
 - iPhone/iPad: el clic abre la app con `twitter://post?message=...` y, si la página no se oculta en 1,5 s, cae al enlace web. Desktop/Android usan el enlace web. **No probado en un iPhone real.**
 - No agregar botones de copiar/compartir imagen (en iPhone X descarta el texto). Para la imagen: descargarla o mantener presionada para copiarla y pegarla en X.

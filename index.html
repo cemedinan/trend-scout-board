@@ -35,8 +35,9 @@ const tz={timeZone:'America/Santiago',dateStyle:'medium',timeStyle:'short'};let 
 function fb(t){const a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(a);a.focus();a.select();a.setSelectionRange(0,t.length);try{document.execCommand('copy')}finally{a.remove()}}
 async function cp(b,t,m){try{if(!navigator.clipboard||!window.isSecureContext)throw 0;await navigator.clipboard.writeText(t)}catch(x){fb(t)}if(b._t)return;const p=b.textContent;b.textContent=m||'[copiado]';b.classList.add('ok');b._t=setTimeout(()=>{b.textContent=p;b.classList.remove('ok');b._t=0},1500)}
 function xi(t){return'https://x.com/intent/post?text='+encodeURIComponent(t)}
-function xlen(t){return[...t.replace(/https?:\/\/\S+/g,'x'.repeat(23))].length}
-function withCta(p){const t=String(p.post||'').trim(),c=(p.cta||[])[0];if(xlen(t)>280)return{t,thread:1};if(!c)return{t};const f=t+'\n\n'+String(c).trim();return xlen(f)<=280?{t:f}:{t,note:1}}
+function withCta(p){const t=String(p.post||'').trim(),c=(p.cta||[])[0];return{t:c?t+'
+
+'+String(c).trim():t}}
 function xdeep(h){var u=new URL(h);var t=u.searchParams.get("text")||"";return "twitter://post?message="+encodeURIComponent(t)}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a.xb");if(!a)return;var ios=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform=="MacIntel"&&navigator.maxTouchPoints>1);if(!ios)return;e.preventDefault();var w=a.href,tm;function cl(){if(document.hidden){clearTimeout(tm);document.removeEventListener("visibilitychange",cl)}}document.addEventListener("visibilitychange",cl);tm=setTimeout(function(){document.removeEventListener("visibilitychange",cl);if(!document.hidden)location.href=w},1500);location.href=xdeep(w)});
 const pc={Alta:'pA',Media:'pM',Baja:'pB'};
@@ -46,7 +47,7 @@ ${p.image?`<figure class="img"><a href="${e(p.image)}" target="_blank"><img src=
 <div class="blk d"><div class="lbl">borrador/en</div><pre id="t-${e(p.id)}">${e(p.post)}</pre></div>
 ${(p.cta||[]).length?`<div class="blk d"><div class="lbl">cta sugerido</div><pre id="c-${e(p.id)}">${p.cta.map(e).join('\n')}</pre></div>`:''}
 <div class="blk"><div class="lbl">brief del visual (para Venn/Spielberg)</div><pre id="v-${e(p.id)}">${e(p.visual)}</pre></div>
-${(()=>{const w=withCta(p);return`<a class="xb" href="${e(xi(w.t))}" target="_blank" rel="noopener">${w.thread?'POST ON X (thread: edit)':'POST ON X'}</a><div class="xrow">${p.image?`<a href="${e(p.image)}" download>[image ↓]</a><span class="hint">↳ download the image, then attach it in X before sending</span>`:''}${w.thread?`<span class="note">más de 280 caracteres (${xlen(w.t)}): divídelo en hilo en X</span>`:w.note?`<span class="note">CTA not added (over 280 chars); add it as a reply</span>`:''}</div>`})()}
+${(()=>{const w=withCta(p);return`<a class="xb" href="${e(xi(w.t))}" target="_blank" rel="noopener">POST ON X</a><div class="xrow">${p.image?`<a href="${e(p.image)}" download>[image ↓]</a><span class="hint">↳ download the image, then attach it in X before sending</span>`:''}</div>`})()}
 ${p.window?`<div class="meta">ventana: ${e(p.window)}</div>`:''}
 <div class="acts"><button data-c="t-${e(p.id)}">[copiar post]</button>${(p.cta||[]).length?`<button data-c="c-${e(p.id)}">[COPIAR CTA]</button>`:''}<button data-c="v-${e(p.id)}">[COPIAR VISUAL]</button><a href="${e(p.source)}" target="_blank" rel="noopener">[fuente ↗]</a></div></article>`}
 function render(){const L=D.filter(p=>F==='all'||p.priority===F);document.getElementById('list').innerHTML=L.map(card).join('')||'<p class="sys">* sin sugerencias vigentes *</p>';
